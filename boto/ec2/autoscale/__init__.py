@@ -192,6 +192,26 @@ class AutoScaleConnection(AWSQueryConnection):
         self.build_list_params(params, instance_ids, 'InstanceIds')
         return self.get_status('AttachInstances', params)
 
+    def attach_load_balancers(self, name, lbs):
+        """
+        Attach instances to an autoscaling group.
+        """
+        params = {
+            'AutoScalingGroupName': name,
+        }
+        self.build_list_params(params, lbs, 'LoadBalancerNames')
+        return self.get_status('AttachLoadBalancers', params)
+
+    def detach_load_balancers(self, name, lbs):
+        """
+        Attach instances to an autoscaling group.
+        """
+        params = {
+            'AutoScalingGroupName': name,
+        }
+        self.build_list_params(params, lbs, 'LoadBalancerNames')
+        return self.get_status('DetachLoadBalancers', params)
+
     def detach_instances(self, name, instance_ids, decrement_capacity=True):
         """
         Detach instances from an Auto Scaling group.
