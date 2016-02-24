@@ -97,6 +97,7 @@
         "eu-central-1": "monitoring.eu-central-1.amazonaws.com"
     },
     "codedeploy": {
+        "ap-southeast-1": "codedeploy.ap-southeast-1.amazonaws.com",
         "ap-southeast-2": "codedeploy.ap-southeast-2.amazonaws.com",
         "eu-west-1": "codedeploy.eu-west-1.amazonaws.com",
         "us-east-1": "codedeploy.us-east-1.amazonaws.com",
